@@ -71,23 +71,17 @@ const Statistiks = (props) => {
   const posetivePersent = () => {
         const pp=(good)/(good+neutral+poor)*100
         return pp
-  }
-  
-  if ((good+neutral+poor)===0){
-    return(
-      <div>no feedback yet</div>
-    )
-  }    
+      }
+
 
   return(
-    <table>
-      <thead></thead>
-      <tr><td>Hyva</td><td>{good}</td></tr>
-      <tr><td>Neutral</td><td>{neutral}</td></tr>
-      <tr><td>Houno</td><td>{poor}</td></tr>
-      <tr><td>Keskiarvo</td><td>{avarage().toFixed(1)}</td></tr>
-      <tr><td>positiivisia</td><td>{posetivePersent().toFixed(1)}%</td></tr>
-    </table>
+    <div>
+     <p>Hyva {good}</p>
+     <p>Neutral {neutral}</p>
+     <p>Houno {poor}</p>
+     <p>Keskiarvo {avarage().toFixed(1)}</p>
+     <p>positiivisia {posetivePersent().toFixed(1)}%</p>
+    </div>
   )
 }
 

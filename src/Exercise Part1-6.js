@@ -62,35 +62,16 @@ const Button = (props) =>{
 
 const Statistiks = (props) => {
   const {good, neutral,poor}= props.stats
-  const avarage = () => {
-//    console.log('g:', good,'n:', neutral,'p:', poor)
-    const w = {g:1 ,n:0 ,p:-1 }
-    const avg=((good*w.g+neutral*w.n+poor*w.p)/(good+neutral+poor))
-    return avg
-  }
-  const posetivePersent = () => {
-        const pp=(good)/(good+neutral+poor)*100
-        return pp
-  }
-  
-  if ((good+neutral+poor)===0){
-    return(
-      <div>no feedback yet</div>
-    )
-  }    
-
+//  console.log('props: ',props)
+//  console.log(good)
   return(
-    <table>
-      <thead></thead>
-      <tr><td>Hyva</td><td>{good}</td></tr>
-      <tr><td>Neutral</td><td>{neutral}</td></tr>
-      <tr><td>Houno</td><td>{poor}</td></tr>
-      <tr><td>Keskiarvo</td><td>{avarage().toFixed(1)}</td></tr>
-      <tr><td>positiivisia</td><td>{posetivePersent().toFixed(1)}%</td></tr>
-    </table>
+    <div>
+     <p>Hyva {good}</p>
+     <p>Neutral {neutral}</p>
+     <p>Houno {poor}</p>
+    </div>
   )
 }
-
 
 
 ReactDOM.render(
