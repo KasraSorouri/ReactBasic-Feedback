@@ -23,7 +23,7 @@ feedback = (fb) => () => {
 }
 
 render(){
-  console.log(this.state)
+//  console.log(this.state)
   return(
     <div>
       <div>
@@ -82,11 +82,13 @@ const Statistiks = (props) => {
   return(
     <table>
       <thead></thead>
+      <tbody>
       <tr><td>Hyva</td><td>{good}</td></tr>
       <tr><td>Neutral</td><td>{neutral}</td></tr>
       <tr><td>Houno</td><td>{poor}</td></tr>
       <tr><td>Keskiarvo</td><td>{avarage().toFixed(1)}</td></tr>
       <tr><td>positiivisia</td><td>{posetivePersent().toFixed(1)}%</td></tr>
+      </tbody>
     </table>
   )
 }
